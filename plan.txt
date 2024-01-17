@@ -1,0 +1,17 @@
+Diary Application
+
+Page class
+- Date
+- Page number
+- Contents
+
+Diary class
+- Pages
+- Later on create folders to separate pages into weeks, months, years
+
+entry creation - create, edit, delete
+search functionality
+categories/tags to organise
+export functionality
+calendar view - implement a calendar view that allows users to 
+                navigate to specific dates easily
