@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import src.diary.DiaryManager;
 import src.entry.Entry;
 import src.entry.MediaEntry;
 import src.entry.TextEntry;
@@ -21,10 +22,6 @@ public class PageManager {
         return instance;
     }
 
-    public Page createNewPage() {
-        return new Page();
-    }
-
     public TextEntry addTextEntryToPage(Page page) {
         TextEntry textEntry = new TextEntry();
         page.addEntry(textEntry);
@@ -37,25 +34,21 @@ public class PageManager {
         return mediaEntry;
     }
 
-    public void updatePage(Page page) {
-        page.setPageNum(page.getPageNum() + 1);
-    }
-
     public void savePageToFile(Page page) {
         String entryDisplay = this.formatEntry(page);
         page.setFile(new File(
             "D:\\Jaden\\Documents\\jaden\\code\\DiaryApp\\entries\\day_" + 
-            page.getPageNum() + ".txt"
+            (page.getPageNum() + 1) + ".txt"
             ));
         try {
             FileWriter writeToFile = new FileWriter(
                 "D:\\Jaden\\Documents\\jaden\\code\\DiaryApp\\entries\\day_" + 
-                page.getPageNum() + ".txt"
+                (page.getPageNum() + 1) + ".txt"
                 );
             writeToFile.write(
                 page.getDate() + "\n\nDear Diary,\n" +
                 entryDisplay +
-                "\n\nPage " + page.getPageNum()
+                "\n\nPage " + (page.getPageNum() + 1)
                 );
             writeToFile.close();
             System.out.println("Successfully saved!");

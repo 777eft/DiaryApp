@@ -9,12 +9,16 @@ Diary class
 - Pages
 - Later on create folders to separate pages into weeks, months, years
 
-entry creation - create, edit, delete
-search functionality
-categories/tags to organise
-export functionality
-calendar view - implement a calendar view that allows users to 
-                navigate to specific dates easily
+Features:
+- Entry Creation - Create, Edit, Delete, Save
+- Search Functionality (yet to do)
+- Organise by categories/tags (yet to do)
+- Export to PDF functionality (yet to do)
+- Calendar view - implement a calendar view that allows users to 
+                navigate to specific dates easily (yet to do)
+
 create test cases
 
-create entry class that manages the order of entry types, textentry and mediaentry to extend from it.
+On UI:
+- Search Functionality: search by day number perhaps (yet to do)
+- Rich Text Formatting: bold, italic, and underline (yet to do)

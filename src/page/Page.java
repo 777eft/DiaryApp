@@ -10,12 +10,13 @@ import src.entry.Entry;
 public class Page {
     private static final SimpleDateFormat sdf = new SimpleDateFormat("EEE dd MMM yyyy");
     private String date;
-    private int pageNum = 1;
+    private int pageNum;
     private ArrayList<Entry> entriesOnPage;
     private File file;
 
-    public Page() {
+    public Page(int pageNum) {
         this.date = sdf.format(new Date());
+        this.setDate(date);
         this.setPageNum(pageNum);
         this.setEntriesOnPage(new ArrayList<Entry>());
     }
