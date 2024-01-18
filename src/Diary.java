@@ -6,34 +6,20 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Diary {
-    private ArrayList<Page> entries;
+    private ArrayList<Page> pages;
 
     public Diary() {
-        this.setEntries(new ArrayList<Page>());
+        this.setPages(new ArrayList<Page>());
     }
 
-    public TextEntry createTextEntry() {
-        TextEntry textEntry = new TextEntry();
-        this.addEntry(textEntry);
-        return textEntry;
+    public Page createPage() {
+        Page page = new Page();
+        this.addPage(page);
+        return page;
     }
 
-    public MediaEntry createMediaEntry() {
-        MediaEntry mediaEntry = new MediaEntry();
-        this.addEntry(mediaEntry);
-        return mediaEntry;
-    }
-
-    public void addEntry(Page entry) {
-        this.entries.add(entry);
-    }
-
-    public void removeEntry(Page entry) {
-        entries.remove(entry);
-    }
-
-    public ArrayList<Page> getEntries() {
-        return entries;
+    public void addPage(Page pageToAdd) {
+        this.pages.add(pageToAdd);
     }
 
     public void readPage(int entryNum) {
@@ -54,14 +40,18 @@ public class Diary {
 
     public void showAvailableEntries() {
         System.out.println("Available Diary Entries: ");
-        for (Page entry : entries) {
+        for (Page entry : pages) {
             System.out.println(entry.getPageNum());
         }
     }
 
-    public void setEntries(ArrayList<Page> entries) {
-        this.entries = entries;
+    public ArrayList<Page> getPages() {
+        return pages;
     }
 
+    public void setPages(ArrayList<Page> pages) {
+        this.pages = pages;
+    }
 
+    
 }

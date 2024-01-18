@@ -4,16 +4,18 @@ package src;
 public class Application {
     public static void main(String[] args) {
         Diary diary = new Diary();
+        Page newPage = diary.createPage();
+        TextEntry textEntry = newPage.createTextEntry();
+        textEntry.writeText();
+        MediaEntry mediaEntry = newPage.createMediaEntry();
+        // mediaEntry.writeText();
+        newPage.savePageToFile();
 
-        // TextEntry textEntry = diary.createTextEntry();
-        // textEntry.writeText();
-        // textEntry.saveEntryToFile();
-
-        MediaEntry mediaEntry = diary.createMediaEntry();
-        mediaEntry.writeText();
-        mediaEntry.addMedia();
-        mediaEntry.addMedia();
-        mediaEntry.saveEntryToFile();
+        // MediaEntry mediaEntry = diary.createMediaEntry();
+        // mediaEntry.writeText();
+        // mediaEntry.addMedia();
+        // mediaEntry.addMedia();
+        // mediaEntry.saveEntryToFile();
 
         // int selection;
 

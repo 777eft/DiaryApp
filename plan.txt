@@ -15,3 +15,6 @@ categories/tags to organise
 export functionality
 calendar view - implement a calendar view that allows users to 
                 navigate to specific dates easily
+create test cases
+
+create entry class that manages the order of entry types, textentry and mediaentry to extend from it.
