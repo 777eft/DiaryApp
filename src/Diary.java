@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import src.page.Page;
+
 public class Diary {
     private ArrayList<Page> pages;
 
