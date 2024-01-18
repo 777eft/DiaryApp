@@ -1,17 +1,8 @@
 Diary Application
 
-Page class
-- Date
-- Page number
-- Contents
-
-Diary class
-- Pages
-- Later on create folders to separate pages into weeks, months, years
-
 Features:
-- Entry Creation - Create, Edit, Delete, Save
-- Search Functionality (yet to do)
+- Entry Creation - Create, Edit, Delete, Save, Read (need to do Edit and Save)
+- Search Functionality ✅
 - Organise by categories/tags (yet to do)
 - Export to PDF functionality (yet to do)
 - Calendar view - implement a calendar view that allows users to 

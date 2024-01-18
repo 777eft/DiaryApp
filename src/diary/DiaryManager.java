@@ -1,5 +1,9 @@
 package src.diary;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 import src.page.Page;
 
 public class DiaryManager {
@@ -33,19 +37,19 @@ public class DiaryManager {
         return diary.getPages().get(pageNum - 1);
     }
 
-    // public void readPage(int entryNum) {
-    //     File currentFile = new File(
-    //         "D:\\Jaden\\Documents\\jaden\\code\\DiaryApp\\entries\\day" + 
-    //         entryNum + ".txt"
-    //         );
-    //     try {
-    //         Scanner reader = new Scanner(currentFile);
-    //         while (reader.hasNextLine()) {
-    //             String data = reader.nextLine();
-    //             System.out.println(data);
-    //         }
-    //     } catch (FileNotFoundException e) {
-    //         System.out.println("Entry for this number does not exist. Please try again");
-    //     }
-    // }
+    public void readPage(Diary diary, int entryNum) {
+        File currentFile = new File(
+            "D:\\Jaden\\Documents\\jaden\\code\\DiaryApp\\entries\\day_" + 
+            entryNum + ".txt"
+            );
+        try {
+            Scanner reader = new Scanner(currentFile);
+            while (reader.hasNextLine()) {
+                String data = reader.nextLine();
+                System.out.println(data);
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("Entry for this number does not exist. Please try again");
+        }
+    }
 }

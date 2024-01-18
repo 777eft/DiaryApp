@@ -2,6 +2,7 @@ package src;
 
 import src.diary.Diary;
 import src.diary.DiaryManager;
+import src.entry.EntryManager;
 import src.entry.MediaEntry;
 import src.entry.TextEntry;
 import src.page.Page;
@@ -13,17 +14,18 @@ public class Application {
 
         DiaryManager diaryManager = DiaryManager.getInstance();
         PageManager pageManager = PageManager.getInstance();
+        EntryManager entryManager = EntryManager.getInstance();
         
         Page page = diaryManager.createPage(diary);
         TextEntry textEntry = pageManager.addTextEntryToPage(page);
-        textEntry.writeText();
+        entryManager.writeText(textEntry);
         MediaEntry mediaEntry = pageManager.addMediaEntryToPage(page);
-        mediaEntry.addMedia();
+        entryManager.addMedia(mediaEntry);
         pageManager.savePageToFile(page);
 
         Page page2 = diaryManager.createPage(diary);
         TextEntry textEntry2 = pageManager.addTextEntryToPage(page2);
-        textEntry2.writeText();
+        entryManager.writeText(textEntry2);
         pageManager.savePageToFile(page2);
 
         // int selection;

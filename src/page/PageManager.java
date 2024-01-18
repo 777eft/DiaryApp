@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import src.diary.DiaryManager;
 import src.entry.Entry;
 import src.entry.MediaEntry;
 import src.entry.TextEntry;
