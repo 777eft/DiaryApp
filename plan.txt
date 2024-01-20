@@ -3,7 +3,7 @@ Diary Application
 Features:
 - Entry Creation - Create, Edit, Delete, Save, Read ✅
 - Search Functionality ✅
-- Organise by categories/tags (yet to do)
+- Organise by categories/tags ✅
 - Export to PDF functionality (yet to do)
 - Calendar view - implement a calendar view that allows users to 
                 navigate to specific dates easily (yet to do)

@@ -10,13 +10,15 @@ import src.entry.Entry;
 public class Page {
     private static final SimpleDateFormat sdf = new SimpleDateFormat("EEE dd MMM yyyy");
     private String date;
+    private String userFeeling;
     private int pageNum;
     private ArrayList<Entry> entriesOnPage;
     private File file;
 
-    public Page(int pageNum) {
+    public Page(int pageNum, String feeling) {
         this.date = sdf.format(new Date());
         this.setDate(date);
+        this.setUserFeeling(feeling);
         this.setPageNum(pageNum);
         this.setEntriesOnPage(new ArrayList<Entry>());
     }
@@ -31,6 +33,14 @@ public class Page {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getUserFeeling() {
+        return userFeeling;
+    }
+
+    public void setUserFeeling(String userFeeling) {
+        this.userFeeling = userFeeling;
     }
 
     public int getPageNum() {

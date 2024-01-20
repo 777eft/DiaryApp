@@ -24,14 +24,9 @@ public class Application {
         MediaEntry mediaEntry = pageManager.addMediaEntryToPage(page);
         entryManager.addMedia(mediaEntry);
         diaryManager.savePage(diary, page);
-        pageManager.savePageToFile(page);
 
-        Page page2 = diaryManager.createPage(diary);
-        TextEntry textEntry2 = pageManager.addTextEntryToPage(page2);
-        entryManager.writeText(textEntry2);
-        diaryManager.savePage(diary, page2);
-        pageManager.savePageToFile(page2);
-        
+        System.out.println(diaryManager.sortPages(diary));
+
         // int selection;
 
         // do {
