@@ -5,12 +5,14 @@ import src.diary.DiaryManager;
 import src.entry.EntryManager;
 import src.entry.MediaEntry;
 import src.entry.TextEntry;
+import src.entry.Entry;
 import src.page.Page;
 import src.page.PageManager;
 
 public class Application {
     public static void main(String[] args) {
         Diary diary = new Diary();
+        System.out.println(diary.getCurrentPageNumber());
 
         DiaryManager diaryManager = DiaryManager.getInstance();
         PageManager pageManager = PageManager.getInstance();
@@ -21,13 +23,15 @@ public class Application {
         entryManager.writeText(textEntry);
         MediaEntry mediaEntry = pageManager.addMediaEntryToPage(page);
         entryManager.addMedia(mediaEntry);
+        diaryManager.savePage(diary, page);
         pageManager.savePageToFile(page);
 
         Page page2 = diaryManager.createPage(diary);
         TextEntry textEntry2 = pageManager.addTextEntryToPage(page2);
         entryManager.writeText(textEntry2);
+        diaryManager.savePage(diary, page2);
         pageManager.savePageToFile(page2);
-
+        
         // int selection;
 
         // do {

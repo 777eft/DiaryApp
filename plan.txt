@@ -1,7 +1,7 @@
 Diary Application
 
 Features:
-- Entry Creation - Create, Edit, Delete, Save, Read (need to do Edit and Save)
+- Entry Creation - Create, Edit, Delete, Save, Read ✅
 - Search Functionality ✅
 - Organise by categories/tags (yet to do)
 - Export to PDF functionality (yet to do)
@@ -11,5 +11,6 @@ Features:
 create test cases
 
 On UI:
+- Edit function
 - Search Functionality: search by day number perhaps (yet to do)
 - Rich Text Formatting: bold, italic, and underline (yet to do)

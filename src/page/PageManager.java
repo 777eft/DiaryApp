@@ -37,17 +37,17 @@ public class PageManager {
         String entryDisplay = this.formatEntry(page);
         page.setFile(new File(
             "D:\\Jaden\\Documents\\jaden\\code\\DiaryApp\\entries\\day_" + 
-            (page.getPageNum() + 1) + ".txt"
+            page.getPageNum() + ".txt"
             ));
         try {
             FileWriter writeToFile = new FileWriter(
                 "D:\\Jaden\\Documents\\jaden\\code\\DiaryApp\\entries\\day_" + 
-                (page.getPageNum() + 1) + ".txt"
+                page.getPageNum() + ".txt"
                 );
             writeToFile.write(
                 page.getDate() + "\n\nDear Diary,\n" +
                 entryDisplay +
-                "\n\nPage " + (page.getPageNum() + 1)
+                "\n\nPage " + page.getPageNum()
                 );
             writeToFile.close();
             System.out.println("Successfully saved!");

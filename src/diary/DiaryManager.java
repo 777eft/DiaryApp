@@ -20,8 +20,7 @@ public class DiaryManager {
     }
 
     public Page createPage(Diary diary) {
-        Page page = new Page(diary.getPages().size());
-        this.addPage(diary, page);
+        Page page = new Page(diary.getCurrentPageNumber());
         return page;
     }
 
@@ -35,6 +34,11 @@ public class DiaryManager {
 
     public Page searchPage(Diary diary, int pageNum) {
         return diary.getPages().get(pageNum - 1);
+    }
+
+    public void savePage(Diary diary, Page page) {
+        this.addPage(diary, page);
+        this.updatePageNumber(diary);
     }
 
     public void readPage(Diary diary, int entryNum) {
@@ -51,5 +55,9 @@ public class DiaryManager {
         } catch (FileNotFoundException e) {
             System.out.println("Entry for this number does not exist. Please try again");
         }
+    }
+
+    public void updatePageNumber(Diary diary) {
+        diary.setCurrentPageNumber(diary.getCurrentPageNumber() + 1);
     }
 }
