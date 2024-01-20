@@ -5,18 +5,16 @@ import src.diary.DiaryManager;
 import src.entry.EntryManager;
 import src.entry.MediaEntry;
 import src.entry.TextEntry;
-import src.entry.Entry;
 import src.page.Page;
 import src.page.PageManager;
 
 public class Application {
     public static void main(String[] args) {
-        Diary diary = new Diary();
-        System.out.println(diary.getCurrentPageNumber());
-
         DiaryManager diaryManager = DiaryManager.getInstance();
         PageManager pageManager = PageManager.getInstance();
         EntryManager entryManager = EntryManager.getInstance();
+
+        Diary diary = new Diary();
         
         Page page = diaryManager.createPage(diary);
         TextEntry textEntry = pageManager.addTextEntryToPage(page);
@@ -24,9 +22,22 @@ public class Application {
         MediaEntry mediaEntry = pageManager.addMediaEntryToPage(page);
         entryManager.addMedia(mediaEntry);
         diaryManager.savePage(diary, page);
+        pageManager.savePageToFile(page);
+        diaryManager.readPage(diary, 1);
 
-        System.out.println(diaryManager.sortPages(diary));
+        Page page2 = diaryManager.createPage(diary);
+        TextEntry textEntry2 = pageManager.addTextEntryToPage(page2);
+        entryManager.writeText(textEntry2);
+        MediaEntry mediaEntry2 = pageManager.addMediaEntryToPage(page2);
+        entryManager.addMedia(mediaEntry2);
+        TextEntry textEntry3 = pageManager.addTextEntryToPage(page2);
+        entryManager.writeText(textEntry3);
 
+        diaryManager.savePage(diary, page2);
+        pageManager.savePageToFile(page2);
+
+        System.out.println(diary.getPages());
+        
         // int selection;
 
         // do {

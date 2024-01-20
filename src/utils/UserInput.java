@@ -11,6 +11,7 @@ public class UserInput {
         System.out.println("3) Set a reminder");
 
         int choice = Integer.parseInt(scanner.nextLine());
+
         return choice;
     }
 
@@ -19,6 +20,7 @@ public class UserInput {
         System.out.println("Please enter the diary entry number:");
 
         int choice = Integer.parseInt(scanner.nextLine());
+
         return choice;
     }
 }

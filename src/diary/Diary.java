@@ -1,6 +1,8 @@
 package src.diary;
 
 import java.util.ArrayList;
+import java.util.Collections;
+
 import src.page.Page;
 
 public class Diary {
@@ -8,7 +10,7 @@ public class Diary {
     private int currentPageNumber;
 
     public Diary() {
-        this.setPages(new ArrayList<Page>());
+        this.setPages(new ArrayList<Page>(Collections.nCopies(365, null)));
         this.setCurrentPageNumber(1);
     }
 

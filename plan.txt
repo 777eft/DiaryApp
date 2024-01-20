@@ -4,9 +4,9 @@ Features:
 - Entry Creation - Create, Edit, Delete, Save, Read ✅
 - Search Functionality ✅
 - Organise by categories/tags ✅
-- Export to PDF functionality (yet to do)
+- Automatically sort files into folder, for example the first 7 page .txt are saved into a folder called Week 1 (yet to do)
 - Calendar view - implement a calendar view that allows users to 
-                navigate to specific dates easily (yet to do)
+                navigate to specific dates easily (yet to do) -> just add a new parameter in createPage set it to null if theres no input
 
 create test cases
 

@@ -45,7 +45,9 @@ public class PageManager {
                 page.getPageNum() + ".txt"
                 );
             writeToFile.write(
-                page.getDate() + "\n\nDear Diary,\n" +
+                page.getDate() + "\n\n" + 
+                page.getUserFeeling() + 
+                "\n\nDear Diary,\n" +
                 entryDisplay +
                 "\n\nPage " + page.getPageNum()
                 );

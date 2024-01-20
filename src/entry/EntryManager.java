@@ -25,9 +25,11 @@ public class EntryManager {
 
     public void writeText(Entry entry) {
         Scanner scanner = new Scanner(System.in);  
-        System.out.println("Diary Entry: ");
-        String text = scanner.nextLine();
-        
+        System.out.println("Insert text: ");
+        String input = scanner.nextLine();
+        String text =  input.substring(0, 1).toUpperCase()
+                        + input.substring(1); // This ensures that the first letter of the word is Uppercase.
+
         entry.setContent(text);
     }
 

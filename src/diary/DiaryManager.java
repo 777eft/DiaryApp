@@ -1,9 +1,6 @@
 package src.diary;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 import src.entry.Entry;
@@ -26,14 +23,14 @@ public class DiaryManager {
     public Page createPage(Diary diary) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("How are you feeling today?");
-        String feeling = scanner.nextLine();
+        String input = scanner.nextLine();
+        String feeling = input.substring(0, 1).toUpperCase()
+                        + input.substring(1); // This ensures that the first letter of the word is Uppercase.
 
         Page page = new Page(diary.getCurrentPageNumber(), feeling);
-        return page;
-    }
 
-    public void addPage(Diary diary, Page pageToAdd) {
-        diary.getPages().add(pageToAdd);
+        return page;
+        
     }
 
     public void deletePage(Diary diary, int indexToRemove) {
@@ -45,7 +42,7 @@ public class DiaryManager {
     }
 
     public void savePage(Diary diary, Page page) {
-        this.addPage(diary, page);
+        diary.getPages().set(page.getPageNum() - 1, page);
         this.updatePageNumber(diary);
     }
 
@@ -58,6 +55,7 @@ public class DiaryManager {
         }
 
         System.out.println(pageToRead.getDate() + "\n");
+        System.out.println(pageToRead.getUserFeeling() + "\n");
         System.out.println("Dear Diary,");
         System.out.println(content + "\n");
         System.out.println("Page " + pageToRead.getPageNum());
