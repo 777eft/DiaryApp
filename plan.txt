@@ -5,12 +5,13 @@ Features:
 - Search Functionality ✅
 - Organise by categories/tags ✅
 - Automatically sort files into folder, for example the first 7 page .txt are saved into a folder called Week 1 (yet to do)
-- Calendar view - implement a calendar view that allows users to 
-                navigate to specific dates easily (yet to do) -> just add a new parameter in createPage set it to null if theres no input
+- Calendar view - calendar view that allows users to navigate to specific dates easily ✅
 
 create test cases
 
 On UI:
 - Edit function
+- Create profile/log in -> profiles can save multiple diaries (yet to do)
+- Make the media actually show (yet to do)
 - Search Functionality: search by day number perhaps (yet to do)
 - Rich Text Formatting: bold, italic, and underline (yet to do)

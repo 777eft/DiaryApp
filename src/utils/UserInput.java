@@ -23,4 +23,13 @@ public class UserInput {
 
         return choice;
     }
+
+    public static String userFeeling() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("How are you feeling today?");
+        String input = scanner.nextLine();
+        String feeling = input.substring(0, 1).toUpperCase()
+                        + input.substring(1); // This ensures that the first letter of the word is Uppercase.
+        return feeling;
+    }
 }

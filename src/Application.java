@@ -16,25 +16,14 @@ public class Application {
 
         Diary diary = new Diary();
         
-        Page page = diaryManager.createPage(diary);
+        // Page page = diaryManager.createPage(diary);
+        Page page = diaryManager.createPageAtDate(diary);
         TextEntry textEntry = pageManager.addTextEntryToPage(page);
         entryManager.writeText(textEntry);
         MediaEntry mediaEntry = pageManager.addMediaEntryToPage(page);
         entryManager.addMedia(mediaEntry);
         diaryManager.savePage(diary, page);
         pageManager.savePageToFile(page);
-        diaryManager.readPage(diary, 1);
-
-        Page page2 = diaryManager.createPage(diary);
-        TextEntry textEntry2 = pageManager.addTextEntryToPage(page2);
-        entryManager.writeText(textEntry2);
-        MediaEntry mediaEntry2 = pageManager.addMediaEntryToPage(page2);
-        entryManager.addMedia(mediaEntry2);
-        TextEntry textEntry3 = pageManager.addTextEntryToPage(page2);
-        entryManager.writeText(textEntry3);
-
-        diaryManager.savePage(diary, page2);
-        pageManager.savePageToFile(page2);
 
         System.out.println(diary.getPages());
         

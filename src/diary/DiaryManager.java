@@ -6,6 +6,8 @@ import java.util.Scanner;
 import src.entry.Entry;
 
 import src.page.Page;
+import src.utils.DateUtil;
+import src.utils.UserInput;
 
 public class DiaryManager {
     private static DiaryManager instance = null;
@@ -21,16 +23,25 @@ public class DiaryManager {
     }
 
     public Page createPage(Diary diary) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("How are you feeling today?");
-        String input = scanner.nextLine();
-        String feeling = input.substring(0, 1).toUpperCase()
-                        + input.substring(1); // This ensures that the first letter of the word is Uppercase.
+        String feeling = UserInput.userFeeling();
 
         Page page = new Page(diary.getCurrentPageNumber(), feeling);
 
         return page;
-        
+    }
+
+    public Page createPageAtDate(Diary diary) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the Month in number: ");
+        int month = scanner.nextInt();
+        System.out.println("Enter the Day of the month: ");
+        int day  = scanner.nextInt();
+
+        int dayOfYear = DateUtil.getDayOfYear(month, day);
+        String feeling = UserInput.userFeeling();
+
+        Page pageAtDate = new Page(dayOfYear, feeling, Diary.getYear(), month, day);
+        return pageAtDate;
     }
 
     public void deletePage(Diary diary, int indexToRemove) {

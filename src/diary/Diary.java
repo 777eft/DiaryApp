@@ -7,6 +7,7 @@ import src.page.Page;
 
 public class Diary {
     private ArrayList<Page> pages;
+    private static final int YEAR = 2024;
     private int currentPageNumber;
 
     public Diary() {
@@ -20,6 +21,10 @@ public class Diary {
 
     public void setPages(ArrayList<Page> pages) {
         this.pages = pages;
+    }
+
+    public static int getYear() {
+        return YEAR;
     }
 
     public int getCurrentPageNumber() {

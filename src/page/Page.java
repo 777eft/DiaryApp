@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import src.entry.Entry;
+import src.utils.DateUtil;
 
 
 public class Page {
@@ -17,6 +18,14 @@ public class Page {
 
     public Page(int pageNum, String feeling) {
         this.date = sdf.format(new Date());
+        this.setDate(date);
+        this.setUserFeeling(feeling);
+        this.setPageNum(pageNum);
+        this.setEntriesOnPage(new ArrayList<Entry>());
+    }
+
+    public Page(int pageNum, String feeling, int year, int month, int day) {
+        this.date = DateUtil.formatDate(year, month, day);
         this.setDate(date);
         this.setUserFeeling(feeling);
         this.setPageNum(pageNum);
