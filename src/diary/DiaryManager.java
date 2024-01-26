@@ -64,10 +64,10 @@ public class DiaryManager {
     /**
      * Deletes a page from the diary.
      * @param diary The diary object.
-     * @param indexToRemove The index of the page to remove.
+     * @param pageNumToRemove The index of the page to remove.
      */
-    public void deletePage(Diary diary, int indexToRemove) {
-        diary.getPages().remove(indexToRemove - 1); // Remove page from diary at specified index
+    public void deletePage(Diary diary, int pageNumToRemove) {
+        diary.getPages().remove(pageNumToRemove - 1); // Remove page from diary at specified index
     }
 
     /**
