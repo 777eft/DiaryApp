@@ -15,3 +15,4 @@ On UI:
 - Make the media actually show (yet to do)
 - Search Functionality: search by day number perhaps (yet to do)
 - Rich Text Formatting: bold, italic, and underline (yet to do)
+- Add goal tracker for each day/week/month/year (yet to do)

@@ -2,12 +2,22 @@ package src.entry;
 
 import java.util.Scanner;
 
+/**
+ * Manages operations related to diary entries.
+ */
 public class EntryManager {
     private static EntryManager instance = null;
 
+    /**
+     * Ensures the class cannot be instantiated otherwise
+     */
     private EntryManager() {
     }
 
+    /**
+     * Returns the singleton instance of EntryManager.
+     * @return The EntryManager instance.
+     */
     public static EntryManager getInstance() {
         if (instance == null) {
             instance = new EntryManager();
@@ -15,6 +25,10 @@ public class EntryManager {
         return instance;
     }
 
+    /**
+     * Adds media to an entry.
+     * @param entry The entry object.
+     */
     public void addMedia(Entry entry) {
         Scanner scanner = new Scanner(System.in);  
         System.out.println("Insert the image or media path: ");
@@ -23,6 +37,10 @@ public class EntryManager {
         entry.setContent(media);
     }
 
+    /**
+     * Writes text to an entry.
+     * @param entry The entry object.
+     */
     public void writeText(Entry entry) {
         Scanner scanner = new Scanner(System.in);  
         System.out.println("Insert text: ");
@@ -31,9 +49,5 @@ public class EntryManager {
                         + input.substring(1); // This ensures that the first letter of the word is Uppercase.
 
         entry.setContent(text);
-    }
-
-    public void editText() {
-        // Implement text editing functionality
     }
 }
