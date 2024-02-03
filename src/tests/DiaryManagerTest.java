@@ -1,9 +1,11 @@
-package src.diary;
+package src.tests;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import org.junit.Test;
 
+import src.diary.Diary;
+import src.diary.DiaryManager;
 import src.page.Page;
 
 import java.util.ArrayList;
