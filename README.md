@@ -1,6 +1,6 @@
 # Diary Application
 
-The Diary Application is a simple application that allows users to mimic a diary digitally. Users can create, edit, delete, save, and read entries, organize them by categories or tags, search through entries, and view entries in a calendar view.
+The Diary Application is a simple application that allows users to mimic a diary digitally. Users can create, edit, delete, save, and read entries, organise them by categories or tags, search through entries, and view entries in a calendar view.
 
 ## Features
 
